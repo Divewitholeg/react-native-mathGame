@@ -1,10 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Screen from "./components/Screen";
 
-export default function App() {
+export default function Game() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.title}>Sum up...</Text>
+      <Screen randomNumbersAmount={6} />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +15,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "pink",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    color: "teal",
+    fontSize: 30,
+    fontWeight: "bold",
   },
 });
